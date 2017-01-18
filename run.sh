@@ -18,4 +18,5 @@ do
 	read -p "Enter tag: " tag
 done
 
-eval "docker build -f ${image}/Dockerfile -t ${image}:${tag} ."
+cd "${image}"
+eval "docker build -t ${image}:${tag} ."
